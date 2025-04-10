@@ -4,59 +4,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background: #f8f9fa;
     color: #333;
-  }
-  
-  header {
-    background: #004085;
+    padding: 1rem; /* Add padding around the body for better spacing */
+}
+
+header {
     color: #fff;
-    padding: 0;
-    margin: 0;
+    padding: 1.5rem 1rem; /* Add padding for better spacing */
+    margin-bottom: 2rem; /* Add margin below the header */
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  
-  header h1 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-  }
-  
-  header p {
+}
+
+header p {
     font-size: 1.2rem;
     opacity: 0.9;
-  }
-  
-  header img {
+    margin-bottom: 1rem; /* Add spacing below the paragraph */
+}
+
+header img {
     max-width: 200px; /* Adjust the width of the logo */
     height: auto; /* Maintain aspect ratio */
-  }
-  
-  nav {
-    
+    margin-bottom: 1rem; /* Add spacing below the logo */
+}
+
+nav {
     text-align: center;
-    
-  }
-  
-  nav ul {
+    margin-bottom: 2rem; /* Add spacing below the navigation */
+}
+
+nav ul {
     list-style: none; /* Remove bullet points */
     padding: 0;
     margin: 0;
     display: flex; /* Make the list horizontal */
     justify-content: center; /* Center the items */
-  }
-  
-  nav li {
+}
+
+nav li {
     margin: 0 0.5rem; /* Add spacing between items */
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #fff;
     padding: 0.5rem 1rem; /* Add padding to make it look like a button */
     display: inline-block;
@@ -65,61 +68,65 @@
     background: #004085; /* Button background color */
     border-radius: 5px; /* Rounded corners */
     transition: background 0.3s, transform 0.2s; /* Smooth hover effect */
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background: #0056b3; /* Change background on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
-  }
-  
-  section {
-    margin-bottom: 3rem;
-  }
-  
-  h2 {
+}
+
+section {
+    margin-bottom: 3rem; /* Add spacing between sections */
+    padding: 1rem; /* Add padding inside sections */
+    background: #fff; /* Optional: Add a background for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+h2 {
     color: #004085;
     margin-bottom: 1rem;
     border-left: 5px solid #007bff;
     padding-left: 0.75rem;
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: disc;
     padding-left: 2rem;
     line-height: 1.8;
-  }
-  
-  footer {
-    background: #004085;
-    color: #fff;
+    margin-bottom: 1.5rem; /* Add spacing below lists */
+}
+
+footer {
+    color: blue;
     text-align: center;
-    padding: 1px;
-    margin: 0;
+    padding: 1rem; /* Increase padding for better spacing */
+    margin-top: 2rem; /* Add spacing above the footer */
     font-size: 0.9rem;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     header h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     nav a {
-      padding: 0.75rem;
-      font-size: 0.9rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
     }
-  
+
     h2 {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-  
+
     ul {
-      padding-left: 1.5rem;
+        padding-left: 1.5rem;
     }
-  }
+}
