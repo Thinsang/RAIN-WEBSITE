@@ -24,37 +24,36 @@
         </div>
       </header>
 
-      <section id="contact" class="content alt">
-        <div class="container">
-          <h3>Contact Us</h3>
-          <form action="includes/formhandler.php" method="POST" novalidate>
-
-          	
-          	<div>
-              <label for="userName">Name:</label>
-              <input type="text" id="userName" name="userName" placeholder="First & Last Name" required>
-              <span class="error-message" id="userNameError">Please enter your name.</span>
-            </div>
-            
-            <div>
-              <label for="userMail">Email:</label>
-              <input type="email" id="userMail" name="userMail" required>
-              <span class="error-message" id="userMailError">Please enter a valid email.</span>
-            </div>
-            
-            <div>
-              <label for="userMessage">Message:</label>
-              <input type="text" id="userMessage" name="userMessage" required>
-              <span class="error-message" id="userMessageError">Please enter a valid message.</span>
-            </div>
-            
-          	
-          	<div>
-              <label for = "submitButton"> </label>
-          		<input type="submit">
-          	</div>
+      <form action="results.html" method="POST">
+        <div>
+          <label> Name:</label>
+          <input required>
+          <div>
+            <label for="mail">Email:</label>
+            <input id="mail" type="email" required>
+          </div>
+          <div>
+            <label>Message:</label>
+            <input required>
+          <div>
+            <label id="interestChecker" for="interestChecker">Interested in joining RAIN? Please choose what you would most likely be interested in!
+              <div>
+                <select id = "selectionBox">
+                  <option value="Choose">Choose</option>
+                  <option value="Yes">Web Development</option>
+                  <option value="No">Research</option>
+                  <option value="Yes">Other</option>
+                  <option value="N/A">N/A</option>
+                </select>
+              </div>
+              <br>
+            </label>
+          </div>
+          </div>
+          <button id="send-button-form">Submit</button>
+        </div>
           
-          </form>
+      </form>
 
           <div>
             <footer>
@@ -72,44 +71,6 @@
 
         </div>
       </section>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const form = document.querySelector("form");
-          const inputs = form.querySelectorAll("input[required]");
-        
-          inputs.forEach(input => {
-            input.addEventListener("input", () => {
-              input.classList.add("touched");
-              validateField(input);
-            });
-          });
-        
-          form.addEventListener("submit", function (e) {
-            let valid = true;
-            inputs.forEach(input => {
-              input.classList.add("touched");
-              if (!input.checkValidity()) {
-                validateField(input);
-                valid = false;
-              }
-            });
-            if (!valid) e.preventDefault();
-          });
-        
-          function validateField(input) {
-            const errorSpan = document.getElementById(input.id + "Error");
-            if (!input.checkValidity()) {
-              errorSpan.style.display = "block";
-            } else {
-              errorSpan.style.display = "none";
-            }
-          }
-        });
-        </script>
-        
-        
-        
 
 </body>
 </html>
